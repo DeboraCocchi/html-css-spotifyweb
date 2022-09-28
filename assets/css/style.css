@@ -17,11 +17,12 @@ aside{
   background-color: red;
   width:160px;
   height:calc(100vh - 60px);
-  position: fixed;
+  position: absolute;
   left:0;
   top:0;
   z-index: 997;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
   padding:20px 15px 20px 0;
 }
@@ -43,7 +44,7 @@ header{
 main{
   background-color: black;
   padding: 95px 30px 90px 190px;
-  height:100vh;
+  height:calc(100vh - 60px);
   width: 100vw;
   overflow-y: auto;
   overflow-x: hidden;
@@ -54,7 +55,6 @@ footer{
   background-color: blueviolet;
   height: 60px;
   width:100vw;
-  position: fixed;
   bottom:0;
   left:0;
   z-index: 999;
@@ -93,6 +93,11 @@ header .upgrade{
 /*++++++++++++++++ ASIDE +++++++++++++++++*/
 
 aside svg{
+  vertical-align: middle;
+  color:rgb(189,189,189);
+}
+
+.aside-top svg{
   width:20%;
   vertical-align: middle;
   color:rgb(189,189,189);
@@ -108,14 +113,14 @@ aside ul{
   margin:20px 0;
 }
 
-aside ul li{
+aside ul li {
   font-size:80%;
   min-height:20px;
   margin-bottom:10px;
   border-left: 3px solid rgba(160,255,37, 0);
   padding-left:15px;
   font-weight: bold;
-  line-height:1rem;
+
 }
 
 aside ul li:hover, aside ul li:active{
@@ -129,4 +134,51 @@ aside ul li:hover, aside ul li:active{
 aside h5{
   font-size:105%;
   padding:20px 15px 0;
+}
+.aside-playlists li a.d-flex{
+  align-items: center;
+}
+
+.aside-bottom a{
+  padding-left: 15px;
+  font-size:80%;
+  font-weight: bold;
+}
+
+.aside-bottom a>svg{
+  width:15%;
+}
+
+.aside-bottom a::after{
+  content: ' ';
+  display: block;
+  margin:5px 15px;
+  border-bottom:1px solid rgb(189,189,189);
+  width:80%;
+}
+
+.aside-bottom span:last-child{
+  padding:8px 15px;
+  align-items: center;
+}
+
+div.user{
+  position:relative;
+  display: inline-block;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background-color: rgb(127, 127, 127);
+  border: 1px solid rgb(189,189,189) ;
+}
+
+div.user + h4{
+  display: inline-block;
+}
+
+.user svg{
+  position: absolute;
+  width:15px;
+  left:calc(50% - 7.5px);
+  top:calc(50% - 8px);
 }

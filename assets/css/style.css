@@ -14,14 +14,7 @@ body{
 }
 
 
-footer{
-  background-color: blueviolet;
-  height: 60px;
-  width:100vw;
-  bottom:0;
-  left:0;
-  z-index: 999;
-}
+
 
 img{
   max-width: 100%;
@@ -207,7 +200,7 @@ main nav ul a::after{
   width:40%;
 }
 
-main nav ul a:hover::after , main nav ul a:active::after{
+main nav ul a:hover::after , main nav ul a:active::after {
   content: ' ';
   display: block;
   margin-left:calc(50% - 20%);
@@ -222,6 +215,7 @@ main section{
 
 main h2{
   color:white;
+  margin:15px 0;
 }
 
 main h4, main h6{
@@ -237,6 +231,7 @@ main div.card{
   background-color: blue;
   min-width:calc(100% / 6);
   height:100%;
+  padding:1%;
 }
 
 div.card-top-cover{
@@ -251,3 +246,61 @@ div.card-top-cover img{
   object-fit: contain;
 }
 
+.card-bottom-info{
+  margin-top:15px;
+}
+
+
+/*++++++++++++++++ FOOTER +++++++++++++++++*/
+
+footer{
+  background-color: blueviolet;
+  height: 70px;
+  width:100vw;
+  z-index: 999;
+  padding:10px 15px;
+  justify-content: space-between;
+}
+
+.footer-left{
+  height:100%;
+  align-items: center;
+  width:25%;
+}
+
+.footer-left img{
+  height:100%;
+}
+
+.footer-left .song-info{
+  margin-left:15px;
+}
+
+.footer-left i{
+  margin:0 3px 0 15px;
+}
+
+.footer-center{
+  width:40%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-center .song-options{
+  max-width:30%;
+  margin:0 auto 3px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .song-bar-tools{
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-center .bar{
+  width:80%;
+  height:8px;
+  border-radius:5px;
+  background-color: brown;
+}

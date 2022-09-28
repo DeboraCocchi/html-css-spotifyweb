@@ -1,0 +1,132 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+}
+
+aside{
+  background-color: red;
+  width:160px;
+  height:calc(100vh - 60px);
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: 997;
+  flex-direction: column;
+  align-items: flex-start;
+  padding:20px 15px 20px 0;
+}
+
+header{
+  background-color: blue;
+  height:65px;
+  width:calc(100vw - 160px);
+  position: fixed;
+  top:0;
+  right:0;
+  padding:15px;
+  z-index: 998;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+main{
+  background-color: black;
+  padding: 95px 30px 90px 190px;
+  height:100vh;
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+footer{
+  background-color: blueviolet;
+  height: 60px;
+  width:100vw;
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index: 999;
+}
+
+img{
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color:rgb(189,189,189);
+}
+
+a:hover, a:active{
+  color:rgb(252,252,252);
+}
+
+a:hover svg, a:active svg{
+  color:rgb(252,252,252);
+}
+
+
+
+/*++++++++++++++++ HEADER +++++++++++++++++*/
+
+header .upgrade{
+  display: inline-block;
+  color:rgb(252,252,252);
+  border:1px solid rgb(252,252,252);
+  border-radius: 25px;
+  padding:10px 20px;
+  font-size:90%;
+}
+
+/*++++++++++++++++ ASIDE +++++++++++++++++*/
+
+aside svg{
+  width:20%;
+  vertical-align: middle;
+  color:rgb(189,189,189);
+}
+
+aside .logo{
+  width:95%;
+  padding:0 15px;
+}
+
+aside ul{
+  list-style: none;
+  margin:20px 0;
+}
+
+aside ul li{
+  font-size:80%;
+  min-height:20px;
+  margin-bottom:10px;
+  border-left: 3px solid rgba(160,255,37, 0);
+  padding-left:15px;
+  font-weight: bold;
+  line-height:1rem;
+}
+
+aside ul li:hover, aside ul li:active{
+  border-left: 3px solid rgba(161, 255, 37, 1);
+}
+
+.aside-playlists li i{
+  font-size:250%;
+}
+
+aside h5{
+  font-size:105%;
+  padding:20px 15px 0;
+}

@@ -89,13 +89,17 @@ aside .logo{
   padding:0 15px;
 }
 
+.small-logo{
+  display:none;
+}
+
 aside ul{
   list-style: none;
   margin:30px 0;
 }
 
 aside ul li , .aside-playlists>a {
-  font-size:0.7rem;
+  font-size:0.8rem;
   margin-bottom:10px;
   border-left: 3px solid rgba(160,255,37, 0);
   padding-left:15px;
@@ -157,7 +161,7 @@ aside h5{
   align-items: center;
 }
 
-div.user{
+.user{
   position:relative;
   display: inline-block;
   width:20px;
@@ -167,9 +171,10 @@ div.user{
   border: 1px solid rgb(189,189,189) ;
 }
 
-div.user + h4{
-  display: inline-block;
-  font-size:1rem;
+.user h4{
+  display: block;
+  font-size:0.9rem;
+  margin-left: 5px;
 }
 
 .user svg{
@@ -183,7 +188,7 @@ div.user + h4{
 
 main{
   background-color: rgb(16,19,26);
-  padding: 75px 15px 13px 165px;
+  padding: 75px 30px 15px 155px;
   height:calc(100vh - 70px);
   width: 100vw;
   overflow-y: auto;
@@ -196,12 +201,14 @@ main nav ul{
   justify-content: space-between;
   align-items: flex-start;
   max-width: 65%;
+  flex-shrink: 1;
+  flex-wrap: wrap;
 }
 
 main nav ul a{
   text-transform: uppercase;
   font-weight: 600;
-  font-size:0.9rem;
+  font-size:0.9vw;
   text-align: center;
   color:rgb(113,113,113);
 }
@@ -230,22 +237,22 @@ main section{
 
 .row.d-flex{
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content:flex-start;
   width:100%;
 }
 
 main h2{
   color:white;
-  margin:15px 0;
+  margin:15px;
 }
 
 main div.card{
   text-align: center;
-  background-color: rgb(0, 0, 0);
+  min-width:150px;
   max-width:calc(100% / 6);
   height:100%;
   aspect-ratio: 4 / 5;
-  padding:10px;
+  padding:15px;
 }
 
 div.card-top-cover{
@@ -282,7 +289,7 @@ main h6{
 /*++++++++++++++++ FOOTER +++++++++++++++++*/
 
 footer{
-  background-color: blueviolet;
+  background-color: rgb(30,30,30);
   height: 70px;
   width:100vw;
   z-index: 999;
@@ -301,7 +308,8 @@ footer{
 .footer-left .song-info{
   height:100%;
   align-items: center;
-  width:80%;
+  min-width: 70%;
+  
 }
 
 .footer-left .song-info img{
@@ -314,22 +322,23 @@ footer{
   margin-left:8px;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  margin-right:2%;
 }
 
 .footer-left .song-details h5 a{
-  font-size:1rem;
+  font-size:0.8rem;
   color:rgb(252,252,252);
 }
 
 .footer-left .song-details h6 a{
-  font-size:0.8rem;
+  font-size:0.7rem;
 }
 
-
-
-.footer-left .song-icons{
-  width: 20%;
-  justify-content: space-between;
+.footer-left .song-icons i{
+  width: 1rem;
+  justify-content: flex-start;
+  margin:5px;
 }
 
 .footer-center{
@@ -340,7 +349,8 @@ footer{
 }
 
 .footer-center .song-options{
-  width:30%;
+  width:50%;
+  height:50%;
   margin:0 auto 5px;
   justify-content: space-evenly;
   align-items: center;
@@ -365,16 +375,25 @@ footer .song-bar-tools span:first-child, footer .song-bar-tools span:last-child{
   font-size: 0.8rem;
 }
 
+.bar{
+  background-color: rgb(72,72,72);
+  border-radius:5px;
+}
+
 .footer-center .bar{
   width:70%;
-  height:8px;
-  border-radius:5px;
-  background-color: brown;
+  height:5px;
+}
+
+.footer-right *{
+  margin:0 5%;
 }
 
 .footer-right .bar{
-  width:50%;
-  height:8px;
-  border-radius:5px;
-  background-color: brown;
+  min-width:50%;
+  height:6px;
 }
+
+/* .footer i{
+  margin:0 5px;
+} */

@@ -1,0 +1,94 @@
+@media screen and (max-width:1000px){
+
+  div.footer-left .song-icons{
+    flex-direction: column;
+    width:15%;
+  }
+  
+  div.footer-center .song-options{
+    width:80%;
+  }
+
+  .footer-right-icons{
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 80%;
+    margin:5% 10%;
+  }
+
+  .footer-right.d-flex{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+
+
+@media screen and (max-width:768px){
+  main nav ul{
+    justify-content: space-evenly;
+  }
+  main nav ul li a{
+    font-size:0.8rem;
+  }
+
+  /* footer */
+  div.footer-left .song-info{
+    width:75%;
+  }
+
+  
+  div.footer-left , div.footer-right{
+  width:25%;
+}
+  div.footer-center{
+  width:40%;
+}
+}
+
+@media screen and (max-width:500px){
+  body header{
+  width:calc(100vw - 35px);}
+
+  body aside.small-width ul li{
+    padding:2px;
+  }
+
+  aside .small-logo{
+    display:block;
+    width:70%;
+    margin-left:5px;
+  }
+
+  aside.small-width{
+  width:35px;
+  padding:10px 2px;
+  align-items: center;
+  }
+
+  aside .hidden{
+    display:none;
+  }
+
+  aside .small-logo{
+    display: block;
+  }
+
+  .aside-top svg , .aside-bottom a svg:not(.dwnl-icon){
+    width:100%;
+  }
+
+  .aside-bottom svg.dwnl-icon{
+    width:45%;
+  }
+
+  .aside-bottom svg.dwnl-icon::after{
+    content: ' ';
+  display: block;
+  margin:5px 15px;
+  border-bottom:1px solid rgb(189,189,189);
+  width:5%;
+  }
+
+}

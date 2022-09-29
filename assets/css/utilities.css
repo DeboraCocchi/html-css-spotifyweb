@@ -1,4 +1,22 @@
 .d-flex{
   display: flex;
-  flex-wrap: wrap;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eeeeee;
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #807d7d;
+  border-radius: 10px;
+  height:50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3e3e3e;
 }

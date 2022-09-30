@@ -56,6 +56,10 @@ header .upgrade{
   font-size:90%;
 }
 
+header .upgrade:hover , .footer-center i.fa-circle-play:hover{
+  transform: scale(108%);
+}
+
 /*++++++++++++++++ ASIDE +++++++++++++++++*/
 
 aside{
@@ -67,10 +71,15 @@ aside{
   left:0;
   top:0;
   z-index: 997;
+}
+
+aside .container{
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding:20px 5px 10px 0;
+  padding:20px 10px;
+  height:100%;
+  width:100%;
 }
 
 aside svg{
@@ -93,26 +102,32 @@ aside .logo{
   display:none;
 }
 
-aside ul{
+aside ul.aside-main-icons{
   list-style: none;
-  margin:30px 0;
+  margin:30px 5px;
 }
-
-aside ul li , .aside-playlists>a {
-  font-size:0.8rem;
+aside ul.aside-main-icons li{
   margin-bottom:10px;
+}
+
+aside ul li a, .aside-playlists>a {
+  font-size:0.8rem;
+  font-weight: 500;
   border-left: 3px solid rgba(160,255,37, 0);
-  padding-left:15px;
-  font-weight: bold;
+  padding-left:5px;
 
 }
 
-aside ul li:hover, aside ul li:active{
+aside .aside-playlists ul li{
+  margin-bottom:8px;
+}
+
+aside ul li a.active{
   border-left: 3px solid rgba(161, 255, 37, 1);
 }
 
 .aside-playlists i{
-  font-size:200%;
+  font-size:150%;
   line-height: 0.7rem;
 }
 
@@ -123,11 +138,16 @@ aside ul li:hover, aside ul li:active{
 .aside-playlists ul{
   overflow-y:auto;
   height:calc(100% - 100px);
+  margin-top:15px;
+}
+
+.aside-playlists ul a{
+  margin-bottom: 8px;
 }
 
 aside h5{
   font-size:0.8rem;
-  padding:8px 15px 18px;
+  padding:8px 5px 18px;
 }
 
 
@@ -136,11 +156,12 @@ aside h5{
   height:70px;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  width:100%;
 }
 
 .aside-bottom a{
-  padding-left: 15px;
-  font-size:0.6rem;
+  font-size:0.7rem;
   font-weight: bold;
 }
 
@@ -151,13 +172,13 @@ aside h5{
 .aside-bottom a::after{
   content: ' ';
   display: block;
-  margin:5px 15px;
+  margin:5px;
   border-bottom:1px solid rgb(189,189,189);
   width:80%;
 }
 
 .aside-bottom span:last-child{
-  padding:8px 15px;
+  padding:5px 2px;
   align-items: center;
 }
 
@@ -171,24 +192,28 @@ aside h5{
   border: 1px solid rgb(189,189,189) ;
 }
 
-.user h4{
-  display: block;
-  font-size:0.9rem;
-  margin-left: 5px;
+.user:hover{
+  cursor: pointer;
+}
+
+.user + h4{
+  display: inline-block;
+  font-size:0.8rem;
+  margin-left: 3px;
 }
 
 .user svg{
   position: absolute;
-  width:15px;
-  left:calc(50% - 7.5px);
-  top:calc(50% - 8px);
+  width:12px;
+  left:calc(50% - 6px);
+  top:calc(50% - 7px);
 }
 
 /*++++++++++++++++ MAIN +++++++++++++++++*/
 
 main{
   background-color: rgb(16,19,26);
-  padding: 75px 30px 15px 155px;
+  padding: 105px 20px 20px 170px;
   height:calc(100vh - 70px);
   width: 100vw;
   overflow-y: auto;
@@ -208,7 +233,8 @@ main nav ul{
 main nav ul a{
   text-transform: uppercase;
   font-weight: 600;
-  font-size:0.9vw;
+  font-size:1vw;
+  margin: 2px 5px;
   text-align: center;
   color:rgb(113,113,113);
 }
@@ -222,7 +248,8 @@ main nav ul a::after{
   width:40%;
 }
 
-main nav ul a:hover::after , main nav ul a:active::after {
+
+main nav ul a.active::after {
   content: ' ';
   display: block;
   margin-left:calc(50% - 20%);
@@ -232,7 +259,7 @@ main nav ul a:hover::after , main nav ul a:active::after {
 }
 
 main section{
-  padding:20px;
+  margin:5vh 0;
 }
 
 .row.d-flex{
@@ -242,17 +269,43 @@ main section{
 }
 
 main h2{
-  color:white;
+  color:rgb(252,252,252);
   margin:15px;
+}
+
+main h3{
+  color:rgb(113,113,113);
+  font-size:1vw;
+  margin:10px 15px;
 }
 
 main div.card{
   text-align: center;
-  min-width:150px;
-  max-width:calc(100% / 6);
+  width:calc(100% / 6);
   height:100%;
   aspect-ratio: 4 / 5;
-  padding:15px;
+  padding:10px;
+  display: block;
+}
+
+div.card:hover .over{
+  display: block;
+}
+
+.over{
+  display: none;
+  z-index: 10;
+  height:100%;
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  cursor: pointer;
+}
+
+.round{
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 div.card-top-cover{
@@ -260,11 +313,25 @@ div.card-top-cover{
   width: 100%;
   height:80%;
   flex-shrink: 1;
+  position: relative;
 }
 
 div.card-top-cover img{
   height:100%;
+  object-fit: cover;
 }
+
+.shadow-player{
+  background-color: rgba(0,0,0,0.5);
+  color:rgb(252,252,252);
+  font-size:2rem;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+
 
 .card-bottom-info{
   height:20%;
@@ -276,8 +343,12 @@ div.card-top-cover img{
 
 main h4, main h6{
   text-transform: capitalize;
-  font-weight:500;
-  font-size:0.9vw;
+  font-weight:500
+}
+
+main h4{
+  font-size:1vw;
+  margin-bottom: 2px;;
 }
 
 main h6{
@@ -290,6 +361,7 @@ main h6{
 
 footer{
   background-color: rgb(30,30,30);
+  color:rgb(189,189,189) ;
   height: 70px;
   width:100vw;
   z-index: 999;
@@ -297,18 +369,19 @@ footer{
   justify-content: space-between;
 }
 
-.footer-left, .footer-right{
+.footer-left{
   height:100%;
   align-items: center;
-  justify-content: space-between;
-  width:14%;
+  justify-content: flex-start;
+  width:22%;
   flex-wrap: nowrap;
 }
 
 .footer-left .song-info{
   height:100%;
   align-items: center;
-  min-width: 70%;
+  justify-content: flex-start;
+  min-width: 50%;
   
 }
 
@@ -317,28 +390,29 @@ footer{
 }
 
 .footer-left .song-details{
-  height:100%;
-  min-width:40%;
-  margin-left:8px;
+  display: inline-block;
+  min-width:80%;
+  margin:5px 5px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-right:2%;
+  margin-right:3px;
 }
 
 .footer-left .song-details h5 a{
-  font-size:0.8rem;
+  font-size:0.9rem;
   color:rgb(252,252,252);
 }
 
 .footer-left .song-details h6 a{
-  font-size:0.7rem;
+  font-size:0.8rem;
+  word-break: break-all;
 }
 
-.footer-left .song-icons i{
-  width: 1rem;
-  justify-content: flex-start;
-  margin:5px;
+.footer-left .song-icons{
+  width: 20%;
+  justify-content: space-between;
+  margin-left:5px;
 }
 
 .footer-center{
@@ -360,7 +434,7 @@ footer{
   font-size:1.5rem;
 }
 
-.footer-center .song-options:hover{
+footer i:hover{
   cursor:pointer;
   color:rgb(252,252,252);
 }
@@ -380,20 +454,59 @@ footer .song-bar-tools span:first-child, footer .song-bar-tools span:last-child{
   border-radius:5px;
 }
 
+.overlap-bar{
+  background-color:rgb(180,180,180);
+  position: relative;
+  width:44%;
+  height:100%;
+  border-radius: 5px;
+  left:0;
+  top:0;
+}
+
+.bar:hover .overlap-bar{
+  background-color:rgba(161, 255, 37,1);
+}
+
+.bar:hover .dot{
+  display: block;
+  cursor: pointer;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  right:-3px;
+  top:-4px;
+  display: none;
+}
+
 .footer-center .bar{
   width:70%;
   height:5px;
 }
 
-.footer-right *{
-  margin:0 5%;
+.footer-right{
+  height:100%;
+  width:18%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
+.volume-right{
+  width:70%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer-right-icons{
+  width:30%;
+  justify-content: space-between;
+}
 .footer-right .bar{
-  min-width:50%;
+  min-width:60%;
   height:6px;
+  margin-left:5px;
 }
-
-/* .footer i{
-  margin:0 5px;
-} */

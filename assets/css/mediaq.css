@@ -1,50 +1,95 @@
+
 @media screen and (max-width:1000px){
+  /* main */
+  
+  main div.card{
+    width:calc(100% / 5);
+  }
+  
+  main .card-bottom-info h4{
+    font-size:1.2vw;
+  }
+  
+  main .card-bottom-info h6{
+    font-size:1vw;
+  }
+
+  /* footer */
 
   div.footer-left .song-icons{
     flex-direction: column;
     width:15%;
   }
-  
+
+  footer div.footer-left .song-details h5 a{
+    font-size:1.9vw;
+  }
+
+  footer div.footer-left .song-details h6 a{
+    font-size:1.8vw;
+  }
+
   div.footer-center .song-options{
     width:80%;
   }
 
   .footer-right-icons{
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     font-size: 80%;
-    margin:5% 10%;
+    width:80%;
+  }
+
+  .footer-right .volume-right{
+    width:65%;
+    justify-content: space-evenly;
   }
 
   .footer-right.d-flex{
     flex-direction: column;
-    justify-content: center;
   }
 
 }
 
 
-
 @media screen and (max-width:768px){
+  /* main */
   main nav ul{
     justify-content: space-evenly;
+    max-width:100%;
+    padding:0 10px;
   }
   main nav ul li a{
     font-size:0.8rem;
   }
 
-  /* footer */
-  div.footer-left .song-info{
-    width:75%;
+  main div.card{
+    width:calc(100% / 4);
   }
 
+  /* footer */
+  div.footer-left .song-details{
+    width:80%;
+  }
   
-  div.footer-left , div.footer-right{
-  width:25%;
+  div.footer-left {
+  width:30%;
 }
   div.footer-center{
   width:40%;
 }
+
+  div.footer-right{
+    width:20%;
+    align-items:inherit
+}
+}
+
+
+@media screen and (max-width:650px){
+  main div.card{
+    width:calc(100% / 3);
+  }
 }
 
 @media screen and (max-width:500px){
@@ -52,19 +97,22 @@
   width:calc(100vw - 35px);}
 
   body aside.small-width ul li{
-    padding:2px;
+    padding:1px;
   }
 
   aside .small-logo{
     display:block;
-    width:70%;
-    margin-left:5px;
+    width:100%;
+    margin:5px;
   }
 
   aside.small-width{
-  width:35px;
-  padding:10px 2px;
+  width:40px;
   align-items: center;
+  }
+
+  aside .container.d-flex{
+    padding: 10px 15px 10px 2px;
   }
 
   aside .hidden{
@@ -76,19 +124,42 @@
   }
 
   .aside-top svg , .aside-bottom a svg:not(.dwnl-icon){
-    width:100%;
+    width:150%;
+  }
+
+  aside .aside-bottom{
+    padding:5px;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  aside .aside-bottom a{
+    padding-bottom:4px;
   }
 
   .aside-bottom svg.dwnl-icon{
-    width:45%;
+    width:150%;
+
   }
 
-  .aside-bottom svg.dwnl-icon::after{
-    content: ' ';
+  aside .aside-bottom a::after{
+  content: ' ';
   display: block;
-  margin:5px 15px;
   border-bottom:1px solid rgb(189,189,189);
-  width:5%;
+  width:90%;
   }
 
+  .d-flex>.user{
+    margin-left:8px;
+  }
+
+  /* ++++++++++++ MAIN +++++++++++++  */
+  body main{
+    padding: 75px 15px 15px 55px; 
+  }
+
+  main div.card{
+    width:calc(100% / 2);
+  }
 }

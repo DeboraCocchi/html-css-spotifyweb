@@ -1,7 +1,10 @@
 
 @media screen and (max-width:1000px){
   /* main */
-  
+  main nav ul li a{
+    font-size:0.8rem;
+  }
+
   main div.card{
     width:calc(100% / 5);
   }
@@ -94,7 +97,7 @@
 
 @media screen and (max-width:500px){
   body header{
-  width:calc(100vw - 35px);}
+  width:calc(100vw - 40px);}
 
   body aside.small-width ul li{
     padding:1px;
@@ -113,6 +116,7 @@
 
   aside .container.d-flex{
     padding: 10px 15px 10px 2px;
+    justify-content: space-between;
   }
 
   aside .hidden{
@@ -155,11 +159,21 @@
   }
 
   /* ++++++++++++ MAIN +++++++++++++  */
-  body main{
-    padding: 75px 15px 15px 55px; 
+  body div.main-section{
+    padding: 130px 15px 15px 15px;
+    width:calc(100% - 40px)
   }
 
-  main div.card{
+  .main-section div.card{
     width:calc(100% / 2);
+  }
+
+  main .main-section .card-bottom-info h4{
+    font-size:2.5vw;
+    margin-bottom: 2px;
+  }
+  
+  main .main-section .card-bottom-info h6{
+    font-size:2.1vw;
   }
 }

@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 html{
   scroll-behavior: smooth;
 }
@@ -24,6 +25,7 @@ a{
 
 a:hover, a:active{
   color:rgb(252,252,252);
+  cursor:pointer;
 }
 
 a:hover svg, a:active svg{
@@ -103,8 +105,9 @@ aside ul.aside-main-icons{
   list-style: none;
   margin:30px 5px;
 }
+
 aside ul.aside-main-icons li{
-  margin-bottom:10px;
+  margin:10px 0px;
 }
 
 aside ul li a, .aside-playlists>a {
@@ -286,8 +289,10 @@ main div.card{
   display: block;
 }
 
-div.card:hover .over{
-  display: block;
+div.card-bottom-info *:hover , .footer-left .song-details         :hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  cursor:pointer;
 }
 
 .over{
@@ -317,6 +322,10 @@ div.card-top-cover{
 div.card-top-cover img{
   height:100%;
   object-fit: cover;
+}
+
+div.card-top-cover:hover .over{
+  display: block;
 }
 
 .shadow-player{

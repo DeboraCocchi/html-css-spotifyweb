@@ -1,4 +1,7 @@
-
+@media screen and (max-width:1180px){
+  main .recently-played .row.d-flex div.card{
+    width:calc(100% / 5);}
+}
 @media screen and (max-width:1000px){
   /* main */
   main nav ul li a{
